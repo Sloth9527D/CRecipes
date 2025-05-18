@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/test/RecipesTest.exe", // 替换为你的 .exe 路径
+            "args": [], // 可传递命令行参数
+            "stopAtEntry": false, // 是否在 main() 入口暂停
+            "cwd": "${workspaceFolder}/build/test/", // 工作目录
+            "environment": [],
+            "externalConsole": false, // 是否使用外部终端
+            "MIMode": "gdb", // 调试器模式（gdb/lldb）
+            "miDebuggerPath": "gdb.exe", // GDB 路径（MinGW 适用）
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
