@@ -1,9 +1,4 @@
 #include <gtest/gtest.h>
-#include <iostream>
-TEST(MyClassTest, BasicTest)
-{
-    EXPECT_EQ(42, 1) << "This is a test message";
-}
 
 int main(int argc, char **argv)
 {

@@ -1,18 +1,13 @@
+set(CMAKE_MODULE_PATH
+  ${CMAKE_MODULE_PATH}
+  ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+include(include)
+
 add_subdirectory(googletest EXCLUDE_FROM_ALL)
+add_subdirectory(ut)
 
-set(test_src
-    main.cpp
-)
-
+set(test_src main.cpp)
 add_executable(RecipesTest ${test_src})
-message("${CMAKE_SOURCE_DIR}/test/googletest/googlemock/include")
-message("${CMAKE_SOURCE_DIR}/test/googletest/googletest/include")
-target_include_directories(RecipesTest
-  PUBLIC
-    ${CMAKE_SOURCE_DIR}/test/googletest/googlemock/include
-    ${CMAKE_SOURCE_DIR}/test/googletest/googletest/include
-)
-
-target_link_libraries(RecipesTest gtest_main gmock_main)
-
+target_link_libraries(RecipesTest ut_feature gtest_main gmock_main)
 add_test(NAME RecipesTest COMMAND RecipesTest)
