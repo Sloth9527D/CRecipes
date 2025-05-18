@@ -1,8 +1,4 @@
-set(CMAKE_MODULE_PATH
-  ${CMAKE_MODULE_PATH}
-  ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-
-include(include)
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/include.cmake)
 
 add_subdirectory(googletest EXCLUDE_FROM_ALL)
 add_subdirectory(ut)

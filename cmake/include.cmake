@@ -1,0 +1,1 @@
+include_directories(${PROJECT_PATH}/code/inc/static_graph)
